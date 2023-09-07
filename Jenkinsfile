@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Git Part') {
             steps {
-                git 'https://github.com/litesh1123/task-5.git'
+                git branch: 'main', url: 'https://github.com/litesh1123/task-5.git'
             }
         }
         stage('Terraform part') {
