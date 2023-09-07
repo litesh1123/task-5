@@ -14,9 +14,8 @@ pipeline {
             steps {
                 script {
                     withCredentials([aws(accessKeyVariable:'AWS_ACCESS_KEY_ID',credentialsId:'awsacceskey',secretKeyVariable:'AWS_SECRET_ACCESS_KEY')]){
-                        sh "terraform init"
-                        sh "terraform plan"
-                        sh "terraform ${action} --auto-approve"
+                        sh "terraform init -reconfigure"
+                        sh "terraform apply --auto-approve"
                     }
                 }
             }
