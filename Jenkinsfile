@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Git Part') {
             steps {
-                git 'https://github.com/udiscopotato/terrafrom-cluster-provision-aws.git'
+                git 'https://github.com/litesh1123/task-5.git'
             }
         }
         stage('Terraform part') {
